@@ -1,0 +1,15 @@
+---
+active:
+  sam: Sam
+  john: John
+  paul: Paul
+
+blocked:
+  mike: Mike
+  tom: Tom
+
+replacement:
+  sam:
+    - mike
+  john:
+    - tom

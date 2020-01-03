@@ -1,0 +1,11 @@
+.idea
+*.tar.gz
+dataset_full
+dataset_preprocess
+users-working.yaml
+jiradata
+.ipynb_checkpoints
+model
+__pycache__
+predictor
+predictor.preproc
