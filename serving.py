@@ -105,11 +105,12 @@ def predict():
 
     try:
         # project
-        project_name = text['fields']['project']['name']
+        project_name = text.get('fields', {}).get('project', {}).get('name', '')
 
         # components
         components = sorted(
-            list(set([_['name'].lower() for _ in text['fields']['components'] if _ not in IGNORED_COMPONENT_NAMES])))
+            list(set(
+                [_['name'].lower() for _ in text['fields'].get('components', []) if _ not in IGNORED_COMPONENT_NAMES])))
         components_name = ", ".join(components)
 
         # description
@@ -120,6 +121,7 @@ def predict():
 
         doc = f"{project_name} {components_name} {description} {summary}".lower()
     except KeyError as error:
+        LOG.error(f'Got error during prediction, error: {error}')
         raise InvalidUsage(
             f'Cannot get a mandatory key in the post data, error: {error}, example of post data: {post_example}',
             status_code=405)
