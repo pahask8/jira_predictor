@@ -1,4 +1,4 @@
 PyYAML==5.2
 fastprogress==0.1.22
-tensorflow_gpu==1.15.0
+tensorflow_gpu==2.3.1
 ktrain==0.7.3
