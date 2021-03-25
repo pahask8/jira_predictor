@@ -1,4 +1,4 @@
-PyYAML==5.2
+PyYAML==5.4
 fastprogress==0.1.22
 # tensorflow>=1.14,<=2
 tensorflow==1.15.0
