@@ -1,5 +1,5 @@
 PyYAML==5.2
 fastprogress==0.1.22
 # tensorflow>=1.14,<=2
-tensorflow==1.15.0
+tensorflow==2.7.2
 ktrain==0.7.3
